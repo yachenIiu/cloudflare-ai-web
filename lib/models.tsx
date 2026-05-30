@@ -59,16 +59,8 @@ export const modelList: Model[] = [
     tag: ["new"],
   },
   {
-    id: "gemini-2.5-flash",
-    name: "gemini-2.5-flash",
-    logo: <GoogleLogo />,
-    type: "Text Generation",
-    input: ["image", "search"],
-    provider: "google",
-  },
-  {
-    id: "gemini-2.5-pro",
-    name: "gemini-2.5-pro",
+    id: "gemini-3.5-flash",
+    name: "gemini-3.5-flash",
     logo: <GoogleLogo />,
     type: "Text Generation",
     input: ["image", "search"],
