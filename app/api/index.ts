@@ -15,14 +15,14 @@ const CF_AI_GATEWAY_NAME = requireEnv("CF_AI_GATEWAY_NAME");
 const CF_WORKERS_AI_TOKEN = requireEnv("CF_WORKERS_AI_TOKEN");
 
 export const aigateway = createAiGateway({
-  accountId: CF_ACCOUNT_ID,
-  gateway: CF_AI_GATEWAY_NAME,
+  accountId: process.env.CF_ACCOUNT_ID ?? "",
+  gateway: process.env.CF_AI_GATEWAY_NAME ?? "",
   apiKey: process.env.CF_AI_GATEWAY_TOKEN,
 });
 
 export const workersai = createWorkersAI({
-  accountId: CF_ACCOUNT_ID,
-  apiKey: CF_WORKERS_AI_TOKEN,
+  accountId: process.env.CF_ACCOUNT_ID ?? "",
+  apiKey: process.env.CF_WORKERS_AI_TOKEN ?? "",
 });
 
 export const google = createGoogleGenerativeAI({
